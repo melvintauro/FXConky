@@ -1,0 +1,71 @@
+
+/* Define standard variables for your theme */
+.custom-tab-pane {
+    -fx-my-bg-color: #002d3238;        /* Your targeted solid background color */
+    -fx-selected-tab-color: #3f444a; /* Slightly lighter/different color for active visibility */
+    -fx-text-color: #ffffff;
+}
+
+/* 1. Main outer TabPane background */
+.custom-tab-pane {
+    -fx-background-color: -fx-my-bg-color;
+	-fx-background-radius: 15;
+	-fx-border-radius: 15;
+	-fx-border-color: black;
+	}
+
+/* 2. The entire header bar strip behind all the tabs */
+.custom-tab-pane > .tab-header-area > .tab-header-background {
+    -fx-background-color: -fx-my-bg-color;
+	-fx-background-radius:  15 15 0 0;
+	-fx-padding: 0;
+	
+	}
+
+/* 3. Style all individual tabs to default to the matching background */
+.custom-tab-pane > .tab-header-area > .headers-region > .tab {
+    -fx-background-color: -fx-my-bg-color;
+    -fx-background-insets: 0;
+    -fx-background-radius: 10;
+	
+
+	
+}
+
+/* 4. Style the active selected tab so the user knows where they are */
+.custom-tab-pane > .tab-header-area > .headers-region > .tab:selected {
+    -fx-background-color: -fx-selected-tab-color;
+	
+	-fx-background-radius:  10;
+}
+
+/* 5. The actual content view body container below the tabs */
+.custom-tab-pane > .tab-content-area {
+    -fx-background-color: -fx-my-bg-color;
+	-fx-background-radius: 15 15 0 0 ;
+
+	
+}
+
+/* 6. Text color formatting for the tab headers */
+.custom-tab-pane .tab-label {
+    -fx-text-fill: -fx-text-color;
+}
+
+/* Targets all Label instances in the application */
+.label {
+    -fx-font-family: "Segoe UI";
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-text-fill: -fx-text-color; /* white */
+    -fx-alignment: center;
+	
+}
+
+.button {
+	-fx-background-color: -fx-my-bg-color;
+	   -fx-background-radius: 15px;
+	   -fx-border-radius: 15px;
+	   -fx-text-fill: -fx-text-color;
+}
+
