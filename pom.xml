@@ -1,0 +1,101 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>javafx</groupId>
+  <artifactId>graph</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <description>graph</description>
+
+
+<build>
+					
+		<plugins>
+			      <!-- <plugin>
+			            <groupId>org.apache.maven.plugins</groupId>
+			            <artifactId>maven-assembly-plugin</artifactId>
+			            <version>3.7.1</version>
+			            <configuration>
+			                <descriptors>
+			                    <descriptor>/src/main/assembly/assembly.xml</descriptor>
+			                </descriptors>
+			            </configuration>
+			            <executions>
+			                <execution>
+			                    <id>make-assembly</id>
+			                    <phase>package</phase>
+			                    <goals>
+			                        <goal>single</goal>
+			                    </goals>
+			                </execution>
+			            </executions>
+			        </plugin>	-->		
+				    <plugin>
+					        <groupId>org.openjfx</groupId>
+					        <artifactId>javafx-maven-plugin</artifactId>
+					        <version>0.0.8</version>
+					        <configuration>
+					             <mainClass>fxconky.FXConky</mainClass>
+					              
+					        </configuration>
+					 </plugin>
+					
+			
+				<plugin>
+	                   <groupId>org.apache.maven.plugins</groupId>
+			            <artifactId>maven-assembly-plugin</artifactId>
+			            <version>3.6.0</version>
+			            <configuration>
+			                <archive>
+			                    <manifest>
+			                        <mainClass>fxconky.FXConky</mainClass>
+			                    </manifest>
+			                </archive>
+			                <descriptorRefs>
+			                    <descriptorRef>jar-with-dependencies</descriptorRef>
+			                </descriptorRefs>
+			            </configuration>
+			            <executions>
+			                <execution>
+			                    <id>make-assembly</id>
+			                    <phase>package</phase>
+			                    <goals>
+			                        <goal>single</goal>
+			                    </goals>
+			                </execution>
+			            </executions>
+			        </plugin>
+			 </plugins>
+</build>
+
+<dependencies>
+			  <dependency>
+				    <groupId>org.openjfx</groupId>
+				    <artifactId>javafx-fxml</artifactId>
+				    <version>21</version>
+			</dependency>
+			  
+			  <dependency>
+			    <groupId>org.openjfx</groupId>
+			    <artifactId>javafx-controls</artifactId>
+			    <version>21</version>
+			  </dependency>
+			  
+			<dependency>
+			    <groupId>org.apache.poi</groupId>
+			     <artifactId>poi-ooxml</artifactId>
+			    <version>5.2.5</version> <!-- or your preferred version -->
+			</dependency>
+         <dependency>
+		    <groupId>org.apache.logging.log4j</groupId>
+		    <artifactId>log4j-core</artifactId>
+		    <version>2.24.1</version> <!-- Match your current log4j version -->
+		</dependency>
+		  <dependency>
+			    <groupId>com.dustinredmond.fxtrayicon</groupId>
+			    <artifactId>FXTrayIcon</artifactId>
+			    <version>4.2.3</version>
+			</dependency>
+			
+</dependencies>
+
+   	<name>button</name> 
+</project>
